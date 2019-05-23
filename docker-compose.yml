@@ -2,6 +2,7 @@ version: "2"
 services:
 
   atlas-server:
+    restart: on-failure
     build: .
     image: wbaa/rokku-dev-apache-atlas
     ports:
@@ -10,11 +11,13 @@ services:
       - "zookeeper"
       - "kafka" 
   zookeeper:
+    restart: on-failure
     image: wurstmeister/zookeeper
     hostname: zookeeper
     ports:
       - "2181:2181"  
   kafka:
+    restart: on-failure
     container_name: kafka
     image: wurstmeister/kafka
     ports:
