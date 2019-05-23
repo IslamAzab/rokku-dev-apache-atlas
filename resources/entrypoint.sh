@@ -7,4 +7,4 @@ export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 /opt/atlas/bin/atlas_start.py
 sh /tmp/atlas-setup.sh
 
-tail -f /dev/null
+tail -f /opt/atlas/logs/application.log

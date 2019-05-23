@@ -38,6 +38,6 @@ RUN rm -rf /apache-atlas.tar.gz
 
 USER atlas
 
-ENTRYPOINT ["sh", "-c", "/entrypoint.sh"]
+ENTRYPOINT ["sh", "-c", "/entrypoint.sh", "tail -fF /opt/atlas/logs/application.log"]
 
 EXPOSE 21000
